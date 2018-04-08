@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30D8183C9D016BDA84A48297 /* Pods_RandomImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB16E36F76B6CD4C9C7CE29 /* Pods_RandomImage.framework */; };
 		50AB44E72078229A0038A6B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AB44E62078229A0038A6B4 /* AppDelegate.swift */; };
 		50AB44E92078229A0038A6B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AB44E82078229A0038A6B4 /* ViewController.swift */; };
 		50AB44EC2078229A0038A6B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50AB44EA2078229A0038A6B4 /* Main.storyboard */; };
@@ -15,6 +16,10 @@
 		50AB44F4207822A10038A6B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50AB44F2207822A10038A6B4 /* LaunchScreen.storyboard */; };
 		50AB44FF207822A20038A6B4 /* RandomImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AB44FE207822A20038A6B4 /* RandomImageTests.swift */; };
 		50AB450A207822A20038A6B4 /* RandomImageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AB4509207822A20038A6B4 /* RandomImageUITests.swift */; };
+		50AB4518207857E90038A6B4 /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AB4517207857E90038A6B4 /* PictureViewController.swift */; };
+		50AB451A20785A090038A6B4 /* FlickrImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AB451920785A090038A6B4 /* FlickrImageCollectionViewCell.swift */; };
+		50AB455A2079704A0038A6B4 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AB45592079704A0038A6B4 /* ImageViewController.swift */; };
+		50AB455C207AAD0C0038A6B4 /* UploadImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AB455B207AAD0C0038A6B4 /* UploadImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		292EEF65F5506388C1270F54 /* Pods-RandomImage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomImage.release.xcconfig"; path = "Pods/Target Support Files/Pods-RandomImage/Pods-RandomImage.release.xcconfig"; sourceTree = "<group>"; };
+		2A247CFD0D6FD5405E697CD5 /* Pods-RandomImage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomImage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RandomImage/Pods-RandomImage.debug.xcconfig"; sourceTree = "<group>"; };
 		50AB44E32078229A0038A6B4 /* RandomImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50AB44E62078229A0038A6B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50AB44E82078229A0038A6B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +56,11 @@
 		50AB4505207822A20038A6B4 /* RandomImageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RandomImageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50AB4509207822A20038A6B4 /* RandomImageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomImageUITests.swift; sourceTree = "<group>"; };
 		50AB450B207822A20038A6B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50AB4517207857E90038A6B4 /* PictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
+		50AB451920785A090038A6B4 /* FlickrImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		50AB45592079704A0038A6B4 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		50AB455B207AAD0C0038A6B4 /* UploadImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageViewController.swift; sourceTree = "<group>"; };
+		DAB16E36F76B6CD4C9C7CE29 /* Pods_RandomImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RandomImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30D8183C9D016BDA84A48297 /* Pods_RandomImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +96,8 @@
 				50AB44FD207822A20038A6B4 /* RandomImageTests */,
 				50AB4508207822A20038A6B4 /* RandomImageUITests */,
 				50AB44E42078229A0038A6B4 /* Products */,
+				6CFB9102B04A7D5151DA923C /* Pods */,
+				7A6B37FE647E95E54A6A4588 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +121,10 @@
 				50AB44F2207822A10038A6B4 /* LaunchScreen.storyboard */,
 				50AB44F5207822A10038A6B4 /* Info.plist */,
 				50AB44ED2078229A0038A6B4 /* RandomImage.xcdatamodeld */,
+				50AB4517207857E90038A6B4 /* PictureViewController.swift */,
+				50AB451920785A090038A6B4 /* FlickrImageCollectionViewCell.swift */,
+				50AB45592079704A0038A6B4 /* ImageViewController.swift */,
+				50AB455B207AAD0C0038A6B4 /* UploadImageViewController.swift */,
 			);
 			path = RandomImage;
 			sourceTree = "<group>";
@@ -128,6 +147,23 @@
 			path = RandomImageUITests;
 			sourceTree = "<group>";
 		};
+		6CFB9102B04A7D5151DA923C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2A247CFD0D6FD5405E697CD5 /* Pods-RandomImage.debug.xcconfig */,
+				292EEF65F5506388C1270F54 /* Pods-RandomImage.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7A6B37FE647E95E54A6A4588 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DAB16E36F76B6CD4C9C7CE29 /* Pods_RandomImage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +171,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 50AB450E207822A20038A6B4 /* Build configuration list for PBXNativeTarget "RandomImage" */;
 			buildPhases = (
+				F83625208C0C103E83DEA361 /* [CP] Check Pods Manifest.lock */,
 				50AB44DF2078229A0038A6B4 /* Sources */,
 				50AB44E02078229A0038A6B4 /* Frameworks */,
 				50AB44E12078229A0038A6B4 /* Resources */,
+				6035AAFCF07613F047BA4686 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -254,13 +292,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6035AAFCF07613F047BA4686 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RandomImage/Pods-RandomImage-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RandomImage/Pods-RandomImage-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F83625208C0C103E83DEA361 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RandomImage-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		50AB44DF2078229A0038A6B4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50AB455C207AAD0C0038A6B4 /* UploadImageViewController.swift in Sources */,
+				50AB451A20785A090038A6B4 /* FlickrImageCollectionViewCell.swift in Sources */,
 				50AB44EF2078229A0038A6B4 /* RandomImage.xcdatamodeld in Sources */,
+				50AB4518207857E90038A6B4 /* PictureViewController.swift in Sources */,
 				50AB44E92078229A0038A6B4 /* ViewController.swift in Sources */,
+				50AB455A2079704A0038A6B4 /* ImageViewController.swift in Sources */,
 				50AB44E72078229A0038A6B4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,15 +515,17 @@
 		};
 		50AB450F207822A20038A6B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A247CFD0D6FD5405E697CD5 /* Pods-RandomImage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AZF6HDWXZJ;
 				INFOPLIST_FILE = RandomImage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.RandomImage;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RandomImage.cam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -449,15 +534,17 @@
 		};
 		50AB4510207822A20038A6B4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 292EEF65F5506388C1270F54 /* Pods-RandomImage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AZF6HDWXZJ;
 				INFOPLIST_FILE = RandomImage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.RandomImage;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RandomImage.cam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
