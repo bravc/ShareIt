@@ -16,6 +16,7 @@ class UploadImageViewController: UIViewController, UIImagePickerControllerDelega
     @IBOutlet var imageTake: UIImageView!
     var imageString: String!
     var imageData: Data!
+    var count = 0
     
 
     override func viewDidLoad() {
@@ -39,14 +40,14 @@ class UploadImageViewController: UIViewController, UIImagePickerControllerDelega
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let image_data = info[UIImagePickerControllerOriginalImage] as? UIImage
-        let imageData:Data = UIImagePNGRepresentation(image_data!)!
+        self.imageData = UIImagePNGRepresentation(image_data!)!
         imageString = imageData.base64EncodedString()
         imageTake.image = UIImage(data: imageData)
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func uploadImage(_ sender: Any) {
-        let url = "https://imageuploadapi.herokuapp.com/"
+        let url = "http://129.21.100.71:8080/upload"
         
         let headers: HTTPHeaders = [
             "Content-type": "multipart/form-data"
@@ -59,7 +60,7 @@ class UploadImageViewController: UIViewController, UIImagePickerControllerDelega
                 multipartFormData.append("\(value)".data(using: String.Encoding.utf8)!, withName: key as String)
             }
             
-            multipartFormData.append(self.imageData, withName: "image", fileName: "image.png", mimeType: "image/png")
+            multipartFormData.append(self.imageData, withName: "image" , fileName: "\(self.count).png", mimeType: "image/png")
             
             
         }, usingThreshold: UInt64.init(), to: url, method: .post, headers: headers) { (result) in
@@ -67,11 +68,9 @@ class UploadImageViewController: UIViewController, UIImagePickerControllerDelega
             case .success(let upload, _, _):
                 upload.responseJSON { response in
                     print("Succesfully uploaded")
-                    if let err = response.error{
-                        
-                        return
-                    }
-                    
+                    print(String(data: response.data!, encoding: String.Encoding.utf8))
+                    self.uploadResponse.text = String(data: response.data!, encoding: String.Encoding.utf8)
+                    self.count += 1
                 }
             case .failure(let error):
                 print("Error in upload: \(error.localizedDescription)")
@@ -90,4 +89,4 @@ class UploadImageViewController: UIViewController, UIImagePickerControllerDelega
     }
     */
 
-}
+
