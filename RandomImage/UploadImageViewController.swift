@@ -21,6 +21,7 @@ class UploadImageViewController: UIViewController, UIImagePickerControllerDelega
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        imageTake.contentMode = .scaleAspectFit
 
         // Do any additional setup after loading the view.
     }
@@ -47,7 +48,7 @@ class UploadImageViewController: UIViewController, UIImagePickerControllerDelega
     }
     
     @IBAction func uploadImage(_ sender: Any) {
-        let url = "http://129.21.100.71:8080/upload"
+        let url = "http://129.21.101.239:8080/upload"
         
         let headers: HTTPHeaders = [
             "Content-type": "multipart/form-data"

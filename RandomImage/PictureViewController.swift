@@ -13,7 +13,7 @@ class PictureViewController: UIViewController, UICollectionViewDataSource, UICol
 
     @IBOutlet var collectionView: UICollectionView!
     
-    var images: Array<ViewController.image>!
+    var images: Array<String>!
     var image: UIImage!
     
     override func viewDidLoad() {
@@ -42,18 +42,19 @@ class PictureViewController: UIViewController, UICollectionViewDataSource, UICol
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "flickrImage", for: indexPath) as! FlickrImageCollectionViewCell
         
-        let photo = self.images[indexPath.row]
-        let url = "https://farm\(photo.farm).staticflickr.com/\(photo.server)/\(photo.id)_\(photo.secret).jpg"
         
-        Alamofire.request(url).responseData { (response) in
+        let url = self.images[indexPath.row]
+        
+        Alamofire.request("http://" + url).responseData { (response) in
             if let data = response.result.value{
                 print(data)
                 let image = UIImage(data: data)
                 cell.data = data
-
+                
                 cell.flickrImage.image = image
             }
         }
+
         return cell
     }
 

@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var stackView: UIStackView!
     @IBOutlet var textField: UITextField!
-    var photos = Array<image>()
+    var photos = Array<String>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,22 +40,20 @@ class ViewController: UIViewController {
     
     func getImage() {
         self.photos.removeAll(keepingCapacity: true)
-        if let search = textField.text{
-            Alamofire.request("https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=a2e7d04262fb4a5b482b6f406b284bd1&text=\(search)&format=json&nojsoncallback=?"
+        Alamofire.request("http://129.21.101.239:8080/photos"
                 ).responseData { response in
                     if let data = response.result.value {
                         do{
                             let json = try JSON(data: data)
-                            for photo in json["photos"]["photo"].arrayValue {
-    
-                                self.photos.append(image(farm: photo["farm"].stringValue, secret: photo["secret"].stringValue, server: photo["server"].stringValue, id: photo["id"].stringValue))
+                            for photo in json.arrayValue {
+                                print(photo.stringValue)
+                                self.photos.append(photo.stringValue)
                             }
                             self.performSegue(withIdentifier: "showImages", sender: self)
                         }catch{}
                     
                 }
             }
-        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
